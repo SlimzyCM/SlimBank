@@ -34,7 +34,14 @@ namespace SlimBank
         private readonly List<BankAccount> customerAccount = new List<BankAccount>();
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="firstName"> customers firstname </param>
+        /// <param name="lastName"> customer lastname</param>
+        /// <param name="email"> customer email</param>
+        /// <param name="username"> customer username</param>
+        /// <param name="password"> customer pasword</param>
         public Customer(string firstName, string lastName, string email, string username, string password)
         {
             CustomerId = seedId++;
@@ -52,16 +59,23 @@ namespace SlimBank
             customerAccount.Add(account);
         }
 
+        // checks the username and password and log the user in
         public void LoggedInCheck (string username, string password)
         {
             if (username == Username && password == Password) LoggedIn = true;
             else Console.WriteLine("Enter the correct username or password");
         }
 
+        // check the logout boolean value to false
         public void LoggedOut()
         {
             LoggedIn = false;
         }
 
+        //creates a list of type bank account and return each individual customers accounts 
+        public List<BankAccount> customerAccountList()
+        {
+            return customerAccount;
+        }
     }
 }

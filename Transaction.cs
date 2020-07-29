@@ -19,13 +19,13 @@ namespace SlimBank
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="owner"></param>
-        /// <param name="accountNumber"></param>
-        /// <param name="type"></param>
-        /// <param name="balance"></param>
-        /// <param name="amount"></param>
-        /// <param name="date"></param>
-        /// <param name="note"></param>
+        /// <param name="owner"> the customers </param>
+        /// <param name="accountNumber"> the account number performing transction</param>
+        /// <param name="type"> The account type</param>
+        /// <param name="balance"> return the account balance</param>
+        /// <param name="amount"> the amount of the transaction</param>
+        /// <param name="date"> time of transaction</param>
+        /// <param name="note"> transaction note</param>
 
         public Transaction( Customer owner, string accountNumber, AccountType type, decimal balance, decimal balanceAfter, decimal amount, DateTime date, string note)
         {
